@@ -11,4 +11,13 @@ Replicar visualmente un post de Instagram usando HTML y CSS, tal como el siguien
 ---
 
 ## 📁 Estructura de Archivos
+## 🌱 ¿Cómo iniciar este proyecto?
+
+No clones este repositorio porque vamos a usar una plantilla diferente.
+
+Recomendamos abrir el repositorio de la plantilla HTML usando un entorno de desarrollo como **Codespaces** (recomendado) o **Gitpod**. Alternativamente, puedes clonarlo en tu computadora local usando el siguiente comando:
+
+```bash
+git clone https://github.com/4GeeksAcademy/html-hello
+
 
