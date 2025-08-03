@@ -1,0 +1,36 @@
+.switcher-btn {
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+.feed-view .grid-only {
+    display: none;
+}
+.grid-view .feed-only {
+    display: none;
+}
+
+.grid-img {
+    width: 100%;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+}
+.justify-content-final{
+    justify-content: center;
+}
+.switcher-btn:hover{
+    color: blue;
+}
+.modal-footer{
+    justify-content: flex-start;
+}
+.form-control-new{
+    padding-top: 10px;
+}
+.log-out{
+    color: red;
+}
+.dropdown-menu {
+  right: 0;
+  left: auto !important;
+  transform: translateX(1%);
+}

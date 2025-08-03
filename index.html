@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Instagram Feed</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/90a3adb1eb.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-light bg-light">
+    <div class="container my-3 d-flex justify-content-between align-items-center">
+      <a class="navbar-brand" href="#">
+        <i class="fa-brands fa-instagram me-2"></i>
+        <span>Instagram</span>
+      </a>
+      <div class="d-flex align-items-center">
+        <button type="button" class="btn btn-success me-2" data-bs-toggle="modal" data-bs-target="#mymodal">Create a new
+          post</button>
+        <div class="dropdown">
+          <button class="btn btn-secondary" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true"
+            aria-expanded="false">
+            <i class="fa-solid fa-gear"></i>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <a class="dropdown-item" href="#">Profile</a>
+            <a class="dropdown-item" href="#">Accesibility</a>
+            <a class="dropdown-item" href="#">privacy and data</a>
+            <a class="dropdown-item log-out" href="#">Log out</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </nav>
+
+  <!-- Modal -->
+  <div class="modal fade" id="mymodal" tabindex="-1" aria-labelledby="modalTitle" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="modalTitle">Create a new post</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body">
+          <p>Caption:</p>
+          <input type="text" id="myInput" class="form-control" placeholder="Add the caption of the post here">
+          <div class="form-control-new">
+            <button type="button" class="btn btn-light"><i class="fa-solid fa-camera"></i></button>
+            <button type="button" class="btn btn-light"><i class="fa-solid fa-location-dot"></i></button>
+          </div>
+        </div>
+
+        <div class="modal-footer ">
+          <button type="button" class="btn btn-secondary">Clouse</button>
+          <button type="button" class="btn btn-success">Publish</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="postContainer" class="container feed-view">
+    <div class="d-flex justify-content-final mb-3">
+      <span class="me-3 switcher-btn" onclick="setView('feed')"><i class="fa-solid fa-bars"></i></span>
+      <span class="switcher-btn" onclick="setView('grid')"><i class="fa-solid fa-table-cells-large"></i></span>
+    </div>
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="row">
+          <!-- grid solo column principal-->
+          <div class="row justify-content-center">
+            <div class="col-12 mb-3 col-lg-6 feed-only">
+              <div class="card">
+                <img src="https://images.unsplash.com/photo-1733981787000-fffca13abb29?fm=jpg&q=60&w=3000"
+                  class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">204 Likes</h5>
+                  <p class="card-text">This is an example of a post on Instagram.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-12 mb-4 col-lg-6  feed-only">
+              <div class="card">
+                <img src="https://i.pinimg.com/1200x/e7/57/b8/e757b89baeaabf4c99a98092a7d8a7e6.jpg" class="card-img-top"
+                  alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">850 Likes</h5>
+                  <p class="card-text">Another beautiful post here.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12 mb-4 col-lg-6 feed-only">
+              <div class="card">
+                <img src="https://i.pinimg.com/1200x/04/68/22/046822a9704e9b0846a0cdca0a7d77bd.jpg" class="card-img-top"
+                  alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">850 Likes</h5>
+                  <p class="card-text">Another beautiful post here.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row justify-content-center">
+            <div class="col-12 mb-4 col-lg-6 feed-only">
+              <div class="card">
+                <img src="https://i.pinimg.com/1200x/7c/af/c8/7cafc87d75b5b493b9b5d829d208a15a.jpg" class="card-img-top"
+                  alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">850 Likes</h5>
+                  <p class="card-text">Another beautiful post here.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- grid mosaica -->
+          <div class="col-4 mb-3 grid-only">
+            <img src="https://images.unsplash.com/photo-1733981787000-fffca13abb29?fm=jpg&q=60&w=3000" class="grid-img"
+              alt="...">
+          </div>
+
+          <div class="col-4 mb-3 grid-only">
+            <img src="https://i.pinimg.com/1200x/e7/57/b8/e757b89baeaabf4c99a98092a7d8a7e6.jpg" class="grid-img"
+              alt="...">
+          </div>
+
+          <div class="col-4 mb-3 grid-only">
+            <img src="https://i.pinimg.com/1200x/04/68/22/046822a9704e9b0846a0cdca0a7d77bd.jpg" class="grid-img"
+              alt="...">
+          </div>
+
+          <div class="col-4 mb-3 grid-only">
+            <img src="https://i.pinimg.com/1200x/7c/af/c8/7cafc87d75b5b493b9b5d829d208a15a.jpg" class="grid-img"
+              alt="...">
+          </div>
+        </div>
+      </div>
+
+      <!-- jQuery -->
+      <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+      <!-- Popper -->
+      <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+      <!-- Bootstrap 4 JS -->
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.min.js"></script>
+      <script src="script.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>
